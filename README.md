@@ -16,11 +16,13 @@ The implicit CRUD functionality of this app will include:
 CREATE
 
 -Add Games
+
 -Add reviews
 
 READ
 
 -View all reviews
+
 -View all games to review
 
 UPDATE
@@ -28,4 +30,5 @@ UPDATE
 -Edit reviews of games
 
 DELETE
+
 -Remove reviews of games
