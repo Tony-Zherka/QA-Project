@@ -1,6 +1,7 @@
+from sqlalchemy import Integer
 from application import db
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, IntegerField
 
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -19,11 +20,12 @@ class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     content = db.Column(db.String(4000), nullable=False)
-    time = db.Column(db.DateTime)
     game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
 
 
 class ReviewForm(FlaskForm):
     name = StringField('Enter your name')
     content = StringField('Enter your review')
+    game_id = IntegerField('Enter the game id')
     submit = SubmitField('submit')
+    
