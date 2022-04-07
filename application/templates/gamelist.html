@@ -1,0 +1,12 @@
+{% extends 'navbar.html' %}
+
+{% block title %}
+<!-- <title>Games list</title> -->
+{% endblock %}
+
+{% block body %}
+<h2> Games List </h2>
+{% for game in all_games %}
+    {{game.id}} {{game.title}} {{game.genre}} {{game.developer}} <a href="{{ url_for('update_game', id = game.id) }}"><button type="button">Update</button></a><a href="{{ url_for('delete_game', id = game.id) }}"><button type="button">Delete</button></a> </p><br>
+{% endfor %}
+{% endblock %}
