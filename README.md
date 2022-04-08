@@ -39,6 +39,10 @@ The implicit CRUD functionality of this app will include:
 
 ## Planning, Design and Project Tracking
 
+## CI Pipeline
+
+
+
 ## Trello Board
 
 firstly i began making a trello board so i knew which was the route i was going to go down from deciding what to create first and what to move on to next, and see my overall progress here is a link to the trello board. ![TrelloBoard](![trello board1](https://user-images.githubusercontent.com/101265381/162193724-7fdce9b5-5484-4bee-8383-9cef30422263.png)
@@ -49,6 +53,11 @@ firstly i began making a trello board so i knew which was the route i was going 
 I made a basic relationship diagram around with the idea of the expected entities, the diagram might change further into the project but this was my initial design. 
 
 ![Erd](https://user-images.githubusercontent.com/101265381/162194438-e733ae8b-c548-4a3f-b8c2-7e5a24336906.png)
+
+after some thought, i came to realise that i wouldnt need the date and time unless i was adding another diagram for users, if i had more time i would have implemented a user diagram and made many to many relationships.
+
+![updated erd diagrams net](https://user-images.githubusercontent.com/101265381/162431085-3bd74534-9533-4a15-900b-e6da4b7465b4.png)
+
 
 ## Risk Assessment
 
