@@ -50,6 +50,14 @@ The pipeline image represents what services and tools that have been chosen for 
 
 firstly i began making a trello board so i knew which was the route i was going to go down from deciding what to create first and what to move on to next, and see my overall progress here is a link to the trello board. ![TrelloBoard](![trello board1](https://user-images.githubusercontent.com/101265381/162193724-7fdce9b5-5484-4bee-8383-9cef30422263.png)
 
+after coming near the end of the project a few things changed on the trello board.
+
+* more user stories
+* main requirement to be completed 90%+ for coverage with jenkins
+* move all files to done that have been completed
+
+![updated trello board](https://user-images.githubusercontent.com/101265381/162486540-6fb2b3bb-d695-44a1-9491-1b70a36cfd23.png)
+
 
 ## ERD
 
@@ -92,11 +100,16 @@ after adding review, you can navigate to see all added reviews at the top, once 
 
 ![working review list](https://user-images.githubusercontent.com/101265381/162481296-74ef61aa-6bb3-4a87-bd0d-2b250cfe1ce1.png)
 
-from here people and delete or update existing reviews, users cant delete games that are connected to reviews the only way to delete a existing game they would have to remove all reviews with that game.
+from here people can delete or update existing reviews, users cant delete games that are connected to reviews the only way to delete a existing game they would have to remove all reviews with that game.
 
-## Testing
+## Testing and issues
 
-For testing i originally used pytest to run tests on all of my code to make sure i got above 90% coverage, but ended up running into issues,
+For testing i originally used pytest to run tests on all of my code to make sure i got above 90% coverage, but ended up running into issues. The main issues i was encountering was making tests work for my update and delete functions. the reason i was having issues is because you cant delete a game without having the review deleted so i had to have both delete functions in one, had to make sure the review function was going first so it deleted the review first before the game. after to make sure the test was working i had to assert something that was always in the webpage for games it was (Games list) and reviews it was (Review list) reason why was because when a game was deleted it would still be in the same web page, but after fixing these changes i was able to reach a coverage of 98%.
+
+below you will have the code and the pytest coverage report.
+
+![test code](https://user-images.githubusercontent.com/101265381/162483849-c2b172f3-5e09-4971-96ed-ce8aee25c286.png)
+
 
 ![pytest coverage](https://user-images.githubusercontent.com/101265381/162475058-0a0e45b5-ad60-4b67-92bd-108f53c045d2.png)
 
@@ -104,6 +117,19 @@ after tuning and fixing my code i ended up with a overall 98% achieved coverage 
 
 ![working jenkins updated](https://user-images.githubusercontent.com/101265381/162475409-a96600fe-9760-4b0b-9a69-34b358936e6f.png)
 
+
+## Future Improvements
+
+there are a few improvements i would like to add if i had more time like:
+
+* Adding users into the data base so people can log in and make accounts
+* Adding times and dates of when reviews have been made
+* Adding scroll menus for users to be able to select which games they would like to review
+* Making the App more appealing and functional for users.
+
+## Authors
+
+Tony Zherka
 
 
 
