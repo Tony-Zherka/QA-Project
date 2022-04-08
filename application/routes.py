@@ -24,7 +24,8 @@ def create_game():
         db.session.add(new_game)
         db.session.commit()
         return redirect(url_for('create_game'))
-    return render_template('addgame.html', form=form)
+    else:
+        return render_template('addgame.html', form=form)
 
 @app.route('/read_game')
 def read_game():
@@ -56,7 +57,8 @@ def delete_game(id):
         db.session.delete(game)
         db.session.commit()
         return redirect(url_for('read_game'))
-    return render_template('gamelist.html', id=id)
+    else:
+        return render_template('gamelist.html', id=id)
     
 
 
@@ -68,7 +70,8 @@ def create_review():
         db.session.add(new_review)
         db.session.commit()
         return redirect(url_for('create_review'))
-    return render_template('addreview.html', form=form)
+    else:
+        return render_template('addreview.html', form=form)
 
 @app.route('/read_review')
 def read_review():
@@ -97,7 +100,8 @@ def delete_review(id):
         db.session.delete(review)
         db.session.commit()
         return redirect(url_for('read_review'))
-    return render_template('reviewlist.html', id=id)
+    else:
+        return render_template('reviewlist.html', id=id)
 
     
 if __name__ == '__main__':
